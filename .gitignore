@@ -1,0 +1,43 @@
+# --- MetaTrader 5 / MQL5 build artifacts ---
+*.ex5
+*.ex4
+*.ex5.tmp
+compile.log
+*.compile.log
+
+# --- Generated logs and test output (CSV logs from the EA, tester logs) ---
+*.csv
+*.log
+
+# --- Strategy Tester caches / results ---
+*.tst
+*.opt
+*.tkc
+*.hcc
+*.hc
+*.fxt
+
+# --- Python (uv scaffold) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Secrets ---
+.env
+.env.*

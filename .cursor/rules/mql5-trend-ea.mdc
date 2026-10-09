@@ -1,0 +1,24 @@
+---
+description: Rules for the MQL5 trend EA project
+alwaysApply: true
+---
+
+# Project: MQL5 Expert Advisor for MetaTrader 5
+
+- Language: MQL5 only. No Python, no MQL4 functions.
+- Output is ONE file: TrendEA.mq5. Do not split into includes
+  unless I ask.
+- The specification is TZ_trend_EA_EN.md. Follow it exactly.
+  Do not add indicators, conditions or features not in the spec.
+  If something is ambiguous, ask before coding.
+- All signal logic runs on CLOSED bars only (shift = 1).
+  Never use the current forming bar for decisions.
+- Every threshold and parameter is an `input`, grouped with
+  `input group`. No magic numbers in the code.
+- Never hardcode the symbol name. Use _Symbol and _Period.
+- Use CTrade for orders. Check retcode after every trade call.
+- Do not invent MQL5 functions. If unsure an API exists, say so
+  instead of guessing.
+- Forbidden: martingale, averaging, grids, trailing stop,
+  breakeven, partial close.
+- Comment the code. Keep functions small and named as in the spec.
